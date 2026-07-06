@@ -1,0 +1,1841 @@
+/* ==========================================
+   UPDATED TYPOGRAPHY CORE RESET
+   ========================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Base text styles (Inter for readability) */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333333;
+  background: #dfe5eb; /* Preserves your original background color tokens */
+}
+
+/* Heading styles (Chivo for a strong, reliable look) */
+h1, h2, h3, h4, h5, h6, .logo {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 700; /* Bold weight for punchy headlines */
+  letter-spacing: -0.02em; /* Tightens the letters for a crisp look */
+}
+
+/* Apply new font family variables to existing template component buttons */
+.btn, .btn-call, .call-btn, .phone-text {
+  font-family: 'Chivo', sans-serif !important;
+  font-weight: 700;
+}
+
+
+
+.page-wrapper {
+  max-width: 1440px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.08),
+    0 2px 10px rgba(0, 0, 0, 0.04);
+}
+
+/* Floating Navigation Bar over Video */
+.main-navbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 60px);
+  max-width: 1280px;
+  height: 80px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 0 30px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 18px;
+
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -1px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 40px;
+}
+
+.nav-links a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.nav-links a:hover {
+  color: #38bdf8;
+}
+
+/* Fullscreen Hero Layout */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: #ffffff;
+  padding-top: 100px;
+}
+
+.hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.65); /* Rich deep-blue tinted overlay */
+  z-index: 2;
+}
+
+/* Central Pitch Content */
+.hero-content {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  max-width: 850px;
+  padding: 0 24px;
+  margin-top: 60px; /* Accounts for the floating top navbar */
+}
+
+/* Trust Badge */
+.badge {
+  display: inline-block;
+  background: rgba(56, 189, 248, 0.15);
+  border: 1px solid rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+  padding: 6px 16px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+
+.hero-content h1 {
+  font-size: 3.75rem;
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  letter-spacing: -1px;
+}
+
+.highlight {
+  color: #38bdf8; /* Brand core signature color */
+}
+
+.hero-content p {
+  font-size: 1.35rem;
+  margin-bottom: 40px;
+  color: #cbd5e1;
+  line-height: 1.5;
+}
+
+/* Call to Action Framework */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 14px 32px;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: #38bdf8;
+  color: #0f172a;
+  box-shadow: 0 4px 14px rgba(56, 189, 248, 0.4);
+}
+
+.btn-primary:hover {
+  background-color: #0ea5e9;
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(4px);
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-call {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  color: white;
+  padding: 12px 22px;
+
+  border-radius: 999px;
+
+  font-weight: 700;
+  text-decoration: none;
+
+  box-shadow: 0 8px 20px rgba(34, 197, 94, 0.35);
+
+  transition: all 0.2s ease;
+}
+
+.btn-call:hover {
+  transform: translateY(-2px);
+}
+
+/* Seamless Mobile Responsiveness */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Auto-hide extra links on small phones */
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.1rem;
+  }
+  .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  .btn {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* ==========================================
+   SERVICES SECTION STYLES
+   ========================================== */
+
+.services-section {
+  background-color: #f8fafc; /* Crisp, clean light background to contrast the dark hero */
+  padding: 100px 24px;
+  color: #1e293b;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Center and Layout Section Header Copy */
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+
+.section-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8; /* Uses the same brand blue color from the hero */
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 16px;
+  color: #0f172a;
+}
+
+.section-header p {
+  font-size: 1.15rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* Flexbox/Grid Controller */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Single Service Card Frame */
+.service-card {
+  background-color: #ffffff;
+  padding: 40px 30px;
+  border-radius: 16px;
+  border: 1px solid #e2e8f0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Card Hover Animation Effect */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Icon Circular Frame */
+.service-icon {
+  font-size: 2rem;
+  background-color: #f0f9ff;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+
+.service-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+
+.service-card p {
+  font-size: 1rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 24px;
+}
+
+/* Text Links Inside Cards */
+.service-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.service-link:hover {
+  color: #0ea5e9;
+}
+
+/* Smooth Breakpoints for Tablets and Mobile Screens */
+@media (max-width: 968px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+}
+
+@media (max-width: 640px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* 1 full column stacked on mobile phones */
+  }
+  .section-header h2 {
+    font-size: 2rem;
+  }
+}
+
+/* ==========================================
+   SERVICES CONTAINER STYLES
+   ========================================== */
+.services-section {
+  background-color: #f8fafc;
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.service-image-container {
+  width: 100%;
+  height: 200px;
+  background-color: #cbd5e1;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 24px;
+}
+
+.service-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.service-card-content p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* ==========================================
+   TRUST / WHY CHOOSE US SECTION STYLES
+   ========================================== */
+.trust-section {
+  background-color: #ffffff; /* Alternating white background */
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.trust-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.trust-icon {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.trust-text h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.trust-text p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================== */
+@media (max-width: 968px) {
+  .services-grid,
+  .trust-grid {
+    grid-template-columns: 1fr; /* Automatically stacks cards/items on mobile */
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   SERVICES CONTAINER STYLES
+   ========================================== */
+.services-section {
+  background-color: #f8fafc;
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.service-image-container {
+  width: 100%;
+  height: 200px;
+  background-color: #cbd5e1;
+}
+
+.service-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.service-card-content {
+  padding: 24px;
+}
+
+.service-card-content h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #0f172a;
+}
+
+.service-card-content p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.service-link {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+}
+
+/* ==========================================
+   TRUST / WHY CHOOSE US SECTION STYLES
+   ========================================== */
+.trust-section {
+  background-color: #ffffff; /* Alternating white background */
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.trust-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.trust-item {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.trust-icon {
+  background-color: #e0f2fe;
+  color: #0284c7;
+  font-weight: bold;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.trust-text h3 {
+  font-size: 1.2rem;
+  color: #0f172a;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.trust-text p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.5;
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN SYSTEM
+   ========================================== */
+@media (max-width: 968px) {
+  .services-grid,
+  .trust-grid {
+    grid-template-columns: 1fr; /* Automatically stacks cards/items on mobile */
+    gap: 30px;
+  }
+}
+
+/* ==========================================
+   ABOUT US SECTION STYLES
+   ========================================== */
+.about-section {
+  background-color: #f8fafc; /* Shifts back to light gray for premium structural separation */
+  padding: 100px 24px;
+  color: #1e293b;
+}
+
+/* Two-Column Asymmetrical Grid Layout */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Left Image Component Configuration */
+.about-image-side {
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.about-image-wrapper {
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+  background-color: #cbd5e1;
+}
+
+.about-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Floating Experience Accent Badge Over Image Frame */
+.experience-badge {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 160px;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.exp-years {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #38bdf8;
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.exp-text {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #94a3b8;
+}
+
+/* Right Side Copy Presentation Control */
+.about-content-side .section-badge {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 12px;
+}
+
+.about-content-side h2 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.about-content-side p {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+/* Value Snippets List */
+.about-values {
+  margin-bottom: 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.value-bullet {
+  font-size: 0.95rem;
+  color: #475569;
+  position: relative;
+  padding-left: 24px;
+  line-height: 1.5;
+}
+
+/* Custom styled dot icon before each value block */
+.value-bullet::before {
+  content: "•";
+  color: #38bdf8;
+  font-weight: bold;
+  font-size: 1.5rem;
+  position: absolute;
+  left: 0;
+  top: -4px;
+}
+
+/* Responsive Structural Adjustments for Smaller viewports */
+@media (max-width: 968px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Collapses side columns down to single rows */
+    gap: 40px;
+  }
+  .about-image-wrapper {
+    height: 350px;
+  }
+  .experience-badge {
+    right: 10px;
+    padding: 16px;
+  }
+}
+
+/* ==========================================
+   RECENT WORK SECTION STYLES
+   ========================================== */
+.portfolio-section {
+  background-color: #ffffff; /* Contrast switch back to solid white */
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #cbd5e1;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Subtle image zoom animation when user hovers over a project card */
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.04);
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+/* Category Label Tag */
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ==========================================
+   MOBILE NAVIGATION HEADER ADJUSTMENT
+   ========================================== */
+@media (max-width: 768px) {
+  /* 
+     1. FIXED HORIZONTAL ROW FRAME:
+     Locks all three layout items onto the same horizontal line row 
+     with a single shared height, matching high-end mobile frameworks.
+  */
+  .main-navbar {
+    width: calc(100% - 16px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    height: 75px !important; /* Fixed snug height to keep items locked on one line */
+    padding: 0 16px !important; 
+    display: flex !important;
+    flex-direction: row !important; /* Guarantees a single horizontal line */
+    justify-content: space-between !important; 
+    align-items: center !important; /* Aligns all text and buttons perfectly vertical center */
+  }
+
+  /* Anchors the brand logo out of the way on the far left edge */
+  .main-navbar .logo {
+    position: absolute !important;
+    left: 16px !important;
+    font-size: 1.05rem !important; 
+    font-weight: 800 !important;
+    letter-spacing: -0.5px !important;
+    margin: 0 !important;
+  }
+
+  /* 
+     2. PERFECTLY CENTERED LINKS WITH ROOMY SPACING:
+     With the logo and button pushed to the edges, the menu blocks 
+     sit dead center with wide 24px spaces between them.
+  */
+  .nav-links {
+    display: flex !important;
+    flex-direction: row !important;
+    gap: 24px !important; /* Wide channels between Services, About Us, and Reviews */
+    justify-content: center !important; 
+    align-items: center !important;
+    margin: 0 auto !important; /* Forces the entire block to lock perfectly dead center */
+    padding: 0 10px !important;
+  }
+
+  .nav-links a {
+    font-size: 1rem !important; /* Keeps your crisp, highly-legible text scale */
+    font-weight: 700 !important;  
+    white-space: nowrap !important;
+    color: #ffffff !important;
+  }
+
+  /* 
+     3. RE-RESTORE TELEPHONE CAPSULE BUTTON:
+     Anchored neatly on the right, keeping your custom rectangular borders, 
+     green brand color tokens, and full telephone text visible.
+  */
+  .call-btn {
+    position: absolute !important;
+    right: 16px !important; /* Layers it safely out of the way on the far right */
+    
+    display: inline-flex !important; 
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+
+    background: #22c55e !important; /* Signature brand green */
+    color: #ffffff !important;
+    text-decoration: none !important;
+
+    padding: 8px 14px !important; /* Standard rectangular button padding */
+    border-radius: 12px !important; /* Restores rectangular capsule corners */
+    width: max-content !important; 
+    
+    font-size: 0.85rem !important;
+    font-weight: 700 !important;
+    white-space: nowrap !important;
+  }
+
+    /* Add this inside the very bottom of your mobile media query block */
+  .nav-links a:hover {
+    color: #38bdf8 !important; /* Changes the link words to vibrant brand blue on hover */
+    text-decoration: none !important;
+  }
+
+
+  .call-btn:hover {
+    background: #16a34a !important;
+    transform: translateY(-1px) !important;
+  }
+
+  /* UNHIDES PHONE DIGITS: Forces the full number string to appear on screen */
+  .phone-text {
+    display: inline !important; 
+    color: #ffffff !important;
+  }
+
+  .phone-icon {
+    font-size: 0.9rem !important;
+    display: inline-block !important;
+  }
+}
+
+
+/* ==========================================
+   RECENT WORK SECTION STYLES
+   ========================================== */
+.portfolio-section {
+  background-color: #ffffff; /* Contrast switch back to solid white */
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #cbd5e1;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Subtle image zoom animation when user hovers over a project card */
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.04);
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+/* Category Label Tag */
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* Responsive Scaling for Mobile Screens */
+@media (max-width: 968px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ==========================================
+   RECENT WORK SECTION STYLES
+   ========================================== */
+.portfolio-section {
+  background-color: #ffffff; /* Contrast switch back to solid white */
+  padding: 80px 24px;
+  color: #1e293b;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.portfolio-item {
+  background-color: #f8fafc;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.portfolio-image-wrapper {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background-color: #cbd5e1;
+}
+
+.portfolio-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Subtle image zoom animation when user hovers over a project card */
+.portfolio-item:hover .portfolio-img {
+  transform: scale(1.04);
+}
+
+.portfolio-info {
+  padding: 20px;
+}
+
+/* Category Label Tag */
+.project-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #38bdf8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.portfolio-info h3 {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+@media (max-width: 640px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ==========================================
+   TRUST ADVANTAGE STYLES
+   ========================================== */
+
+.advantage-section .section-header h2 {
+  font-size: 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.2;
+}
+
+.advantage-section {
+  background-color: #f8fafc;
+  padding: 80px 24px;
+}
+
+.advantage-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.adv-card {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 12px;
+  border: 1px solid #e2e8f0;
+  position: relative;
+}
+
+.adv-number {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #e2e8f0;
+  position: absolute;
+  top: 15px;
+  right: 25px;
+  line-height: 1;
+}
+
+.adv-card h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0f172a;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 2;
+}
+
+.adv-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* ==========================================
+   FAQ ACCORDION STYLES
+   ========================================== */
+.faq-section {
+  background-color: #ffffff;
+  padding: 80px 24px;
+}
+
+.small-container {
+  max-width: 800px !important;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.faq-item {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-question {
+  padding: 20px;
+  font-weight: 700;
+  color: #0f172a;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Arrow indicator trick */
+.faq-question::after {
+  content: "＋";
+  font-weight: bold;
+  color: #38bdf8;
+}
+
+.faq-item[open] .faq-question::after {
+  content: "－";
+}
+
+.faq-answer {
+  padding: 0 20px 20px 20px;
+  color: #475569;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  border-top: 1px solid #e2e8f0;
+  background-color: #ffffff;
+}
+
+/* ==========================================================================
+   PROFESSIONAL FOOTER LAYOUT CONTROLLER
+   ========================================================================== */
+
+/* 1. Base panel wrapper */
+/* ==========================================================================
+   FOOTER CONTENT ADJUSTMENT
+   ========================================================================== */
+
+.main-footer {
+  background: #0b1329 !important;
+  color: white;
+  margin-top: -30px !important;
+  position: relative;
+  overflow: hidden;
+  
+  /* ADJUSTED SPACING: */
+  padding-top: 140px !important;    /* Keeps the top clean and snug to the CTA section */
+  padding-bottom: 220px !important; /* MASSIVELY increases bottom padding to expand the footer down and make deep space */
+  min-height:520px !important;     /* Creates a much taller box overall so content stays split */
+}
+
+.footer-grid {
+  display: grid !important;
+  grid-template-columns: 1.2fr 1fr 1fr !important;
+  gap: 60px !important;
+  align-items: start !important;
+  max-width: 1200px;
+  margin: 0 auto !important;
+  position: relative;
+  z-index: 2;
+  
+  /* CRITICAL CHANGE: */
+  margin-bottom: 60px !important; /* Explicitly lifts this entire row up away from the bottom elements */
+}
+
+
+/* 3. Re-aligns column paragraphs and links list onto a shared horizontal line */
+.footer-brand p,
+.footer-cta-box p,
+.footer-links a:first-of-type {
+  margin-top: 20px !important;
+}
+
+/* 
+   4. FIXED GIANT WATERMARK LOGO:
+   Moved completely above the copyright bar in code flow, increased opacity to 
+   0.14 for clean professional visibility, and set text color to stark template white.
+*/
+.main-footer::after {
+  content: attr(data-name);
+  position: absolute;
+  left: 40px;
+  
+  /* Snaps logo cleanly in the open space right above the copyright line */
+  bottom: 100px !important; 
+  top: auto !important;
+  
+  font-size: clamp(6rem, 14vw, 12rem) !important; /* Bold presentation scaling */
+  font-weight: 900;
+  line-height: 1;
+  color: rgba(255, 255, 255, 0.14) !important; /* Vibrant white overlay tint (no longer faded) */
+  letter-spacing: -5px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 
+   5. FIXED BOTTOM BAR POSITION:
+   Anchored cleanly below the giant watermark background lettering 
+   so the layout never overlaps or looks crowded.
+*/
+.footer-bottom {
+  position: relative !important; /* Resets positioning errors */
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto !important;
+  z-index: 3;
+  
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding-top: 30px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08) !important; /* Crisp boundary separator line */
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.main-footer::after {
+  content: "VOLTPRO";
+  position: absolute;
+  left: 40px;
+  bottom: 30px !important; /* Snaps the large lettering safely to the bottom floor over the line path */
+  top: auto !important; /* Overrides previous top alignment positions */
+  font-size: 7.5rem !important; /* Scaled size beautifully to blend exactly like your reference image */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.04
+  ) !important; /* Crisp template white with a faint background watermark glow */
+
+  font-weight: 900;
+  line-height: 0.8;
+  letter-spacing: -4px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.footer-bottom {
+  position: relative !important; /* Changes back from absolute positioning grid overrides */
+  bottom: auto !important;
+  left: auto !important;
+  right: auto !important;
+  /* CRITICAL CHANGE: */
+  margin-top: auto !important; /* Automatically pushes the copyright bar all the way to the footer floor */
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* Zero out structural displacements inside footer columns */
+.footer-brand,
+.footer-links,
+.footer-cta-box {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+/* Synchronize alignment heights for the headings row */
+.footer-brand .logo,
+.footer-links h3,
+.footer-cta-box h3 {
+  margin: 0 !important;
+  padding: 0 !important;
+  line-height: 1.2 !important;
+}
+
+.footer-brand .logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: white;
+}
+
+.footer-links h3,
+.footer-cta-box h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: white;
+}
+
+/* Pushes the lower contents down into the exact same horizontal baseline row */
+.footer-brand p,
+.footer-cta-box p,
+.footer-links a:first-of-type {
+  margin-top: 20px !important;
+}
+
+.footer-brand p,
+.footer-cta-box p {
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 0.95rem;
+  margin-bottom: 28px !important;
+}
+
+.footer-brand p {
+  max-width: 300px;
+}
+
+/* Vertical menu stack layout for center column */
+.footer-links {
+  gap: 14px !important;
+}
+
+.footer-links a {
+  display: block !important;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 0.95rem;
+  width: max-content;
+  transition: all 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #38bdf8;
+  transform: translateX(6px);
+}
+
+/* Standard tight layout bounds for footer buttons */
+.footer-brand .btn-call,
+.footer-cta-box .btn {
+  width: max-content !important;
+}
+
+.footer-brand .btn-call {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 12px;
+}
+
+.footer-cta-box .btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 12px;
+}
+
+/* Bottom attribution copyright panel */
+.footer-bottom {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  margin-top: 60px !important;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   FINAL PREMIUM FOOTER FIX
+   ========================================================================== */
+
+/* 1. GIANT BACKGROUND LOGO: POSITIONED UPWARD WITH HIGHER WHITENESS VISIBILITY */
+.main-footer::after {
+  content: "VOLTPRO";
+  position: absolute;
+  left: 40px;
+  
+  /* Lifts VOLTPRO up above the copyright and privacy policy links */
+  bottom: 80px !important; 
+  top: auto !important;
+  
+  font-size: clamp(6rem, 14vw, 12rem) !important;
+  font-weight: 900;
+  line-height: 1;
+  
+  /* FIX: Increased opacity to 0.18 so it's a clean, bright white watermark (no longer faint) */
+  color: rgba(255, 255, 255, 0.18) !important; 
+  
+  letter-spacing: -5px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* 2. LOWER LINKS BAR: ANCHORED AT THE ABSOLUTE BOTTOM WITH REMOVED SEPARATOR LINE */
+.footer-bottom {
+  position: absolute !important; 
+  bottom: 25px !important; /* Pins it to the very bottom floor of the screen */
+  left: 40px !important;
+  right: 40px !important;
+  
+  max-width: 1200px;
+  width: calc(100% - 80px);
+  margin: 0 auto !important;
+  z-index: 3;
+  
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  
+  /* FIXES: Removed the border line completely and made text a clear, bright color */
+  border-top: none !important; 
+  color: #cbd5e1 !important; /* Changed from dark slate grey to a crisp, high-contrast light grey */
+  font-size: 0.9rem;
+}
+
+/* Ensure privacy policy text elements match the bright legible color */
+.footer-bottom p,
+.footer-bottom span,
+.footer-bottom a {
+  color: #cbd5e1 !important;
+}
+
+
+/* ==========================================
+   FIX: CTA SECTION STYLING OVERRIDES
+   ========================================== */
+/* Expand the image section size */
+.cta-section {
+  height: 600px !important; /* Increased from 450px to stretch the image down further */
+  background: url("https://res.cloudinary.com/kfcu2z4r/image/upload/v1783349960/pexels-bulat843-1243575272-33531832_vle1xo.jpg") center/cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  margin: 30px auto 0 auto !important; /* Keeps it tight against the footer */
+  max-width: 1400px;
+  border-radius: 16px 16px 0 0 !important; /* Flat bottom edge */
+  overflow: hidden;
+}
+
+
+.cta-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(11, 19, 41, 0.85);
+  z-index: 1;
+}
+
+.cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+  padding: 0 24px;
+}
+
+.cta-content h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.cta-content p {
+  margin-top: 25px;
+  color: #cbd5e1;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   FIX: MAIN HEADER NAVBAR BUTTON RE-STYLING
+   ========================================== */
+.call-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #22c55e;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+  transition: all 0.2s ease;
+}
+
+.call-btn:hover {
+  background: #16a34a;
+  transform: translateY(-1px);
+}
+
+.phone-icon {
+  font-size: 0.9rem;
+  line-height: 1;
+}
+
+/* ==========================================
+   MOBILE FOOTER DISPLAY ADJUSTMENTS (FIXED)
+   ========================================== */
+@media (max-width: 768px) {
+  
+  /* 1. MASTER WORKSPACE CONTAINER WITH HEIGHT FOR VOLTPRO */
+  .main-footer {
+    padding: 80px 24px 220px 24px !important; /* MASSIVELY expanded bottom padding to create height for VOLTPRO */
+    min-height: 850px !important;              /* Forces a tall mobile container so the background text has room to appear */
+    position: relative !important;
+    overflow: hidden !important;
+    display: block !important;
+    margin-top: -30px !important;
+    background: #0b1329 !important;
+    color: white !important;
+  }
+
+  /* 2. CENTER ALIGNED GRID STACK */
+  .footer-grid {
+    grid-template-columns: 1fr !important;
+    gap: 60px !important; /* Increased vertically to prevent squashing */
+    text-align: center !important; 
+    margin-bottom: 60px !important;
+    padding: 0 !important;
+    display: grid !important;
+  }
+
+  /* Centers the inner structures for layout text elements */
+  .footer-brand,
+  .footer-links,
+  .footer-cta-box {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important; 
+    text-align: center !important;
+  }
+
+  /* Centers paragraph description text blocks */
+  .footer-brand p,
+  .footer-cta-box p {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+    line-height: 1.8 !important; /* Prevents tightly squashed lines */
+    max-width: 320px !important;
+  }
+
+  /* Structural navigation padding rules */
+  .footer-links {
+    gap: 16px !important;
+  }
+
+  .footer-links a:first-of-type {
+    margin-top: 14px !important;
+  }
+
+  .footer-links a {
+    margin: 0 auto !important;
+    font-size: 1rem !important;
+  }
+}
+
+/* ==========================================
+   FIX: ADVANTAGE CARD LAYOUT OVERLAP FIX
+   ========================================== */
+
+/* Overrides the absolute placement that causes word collision */
+.adv-card .adv-number {
+  position: static !important; /* Pulls it out of the background layer and into normal layout flow */
+  display: block !important;
+  font-size: 2.25rem !important; /* Slightly more compact, elegant size */
+  font-weight: 900;
+  color: #38bdf8 !important; /* Changed from gray to your premium brand blue for a cohesive touch */
+  line-height: 1 !important;
+  margin-bottom: 12px !important; /* Generous spacing gap directly beneath the number */
+  text-align: left !important;
+}
+
+/* Ensure card headings don't have conflicting overlaps */
+.adv-card h3 {
+  position: relative;
+  z-index: 2;
+  margin-top: 0 !important;
+  margin-bottom: 8px !important;
+}
+
+/* ==========================================
+   PREMIUM INTERACTIONS & SMOOTH SCROLLING
+   ========================================== */
+
+/* 1. Enable native smooth scrolling across the entire site */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Prevents sticky headers from covering titles when jumping to sections */
+}
+
+/* 2. Spice up Service Cards with a modern hover-lift and outline transition */
+.service-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease !important;
+}
+
+.service-card:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+  border-color: #38bdf8 !important; /* Highlights your template's accent blue */
+}
+
+/* 3. Add an animated underline effect to your Main Navbar links */
+.nav-links a {
+  position: relative;
+  transition: color 0.3s ease !important;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #38bdf8;
+  transform-origin: bottom right;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* 4. Spice up Call-to-Action Buttons with a subtle zoom and pulse glow */
+.btn-primary, .btn-call, .call-btn {
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
+              background-color 0.2s ease, 
+              box-shadow 0.2s ease !important;
+}
+
+.btn-primary:hover, .btn-call:hover, .call-btn:hover {
+  transform: translateY(-2px) !important;
+}
+
+/* Light up a sleek green shadow backdrop when hovering over the telephone link */
+.call-btn:hover {
+  box-shadow: 0 8px 24px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* 5. Fluid smooth transition for the FAQ Accordion panels */
+.faq-item {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.faq-item:hover {
+  border-color: #38bdf8 !important;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.03);
+}
+
+/* ==========================================
+   ADVANCED SCROLL FADE & FAQ INTERACTIONS
+   ========================================== */
+
+/* 1. SCROLL FADE-IN ANIMATION FOR IMAGES
+   Uses modern CSS view-driven animation properties. 
+   Images will smoothly fade in and rise slightly as they enter the screen. */
+@keyframes fluidFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.service-img,
+.about-img,
+.portfolio-img {
+  /* Links the fade-in effect to the browser viewport's native scroll progress */
+  animation: fluidFadeIn linear both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 30%;
+}
+
+/* 2. SMOOTH FAQ ACCORDION MICRO-INTERACTIONS
+   Uses native grid transition techniques so <details> panels glide 
+   open softly instead of jumping mechanically. */
+.faq-item {
+  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.faq-answer {
+  display: grid;
+  grid-template-rows: 0fr; /* Keeps text collapse locked tight when shut */
+  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
+              padding 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  padding: 0 20px !important; /* Starts with zero top/bottom padding to prevent jump stutter */
+  overflow: hidden;
+}
+
+/* When the user clicks to open an FAQ block item element */
+.faq-item[open] .faq-answer {
+  grid-template-rows: 1fr; /* Glides the grid open to full content height */
+  padding: 0 20px 20px 20px !important; /* Re-applies bottom padding smoothly */
+}
+
+/* Animate the ＋ and － icon rotation symbols smoothly */
+.faq-question::after {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.faq-item[open] .faq-question::after {
+  transform: rotate(180deg);
+}
+
+/* ==========================================
+   FIX: OUR RECENT WORK CARD HOVER SYSTEM
+   ========================================== */
+
+/* 1. Prepares the project cards for smooth transitions */
+.portfolio-item {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+              border-color 0.3s ease !important;
+}
+
+/* 2. Adds the premium lift and glow effect when a user hovers over the card */
+.portfolio-item:hover {
+  transform: translateY(-8px) scale(1.01) !important;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08) !important;
+  border-color: #38bdf8 !important; /* Highlights your template's core signature blue */
+}
+
+/* ==========================================
+   INTERACTIVE FOOTER LEGAL LINKS STYLES
+   ========================================== */
+
+/* Clears default blue/purple underline link colors */
+.footer-legal-link {
+  color: #cbd5e1 !important; /* Matches your crisp, legible light gray layout tokens */
+  text-decoration: none !important;
+  transition: color 0.25s ease !important; /* Smooth color fade duration timing */
+  display: inline-block;
+}
+
+/* Lights up your signature brand accent blue when hovered */
+.footer-legal-link:hover {
+  color: #38bdf8 !important; /* Vibrant high-contrast blue glow tint */
+  text-decoration: underline !important; /* Subtle underline indicator for web accessibility */
+}
