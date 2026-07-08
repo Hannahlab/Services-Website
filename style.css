@@ -1460,7 +1460,7 @@ h1, h2, h3, h4, h5, h6, .logo {
 
 /* 1. GIANT BACKGROUND LOGO: POSITIONED UPWARD WITH HIGHER WHITENESS VISIBILITY */
 .main-footer::after {
-  content: "VOLTPRO";
+  content: "FIXORA";
   position: absolute;
   left: 40px;
   
