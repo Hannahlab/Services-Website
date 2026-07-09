@@ -60,7 +60,7 @@ h6,
 
 .page-wrapper {
   max-width: 1440px;
-  margin: 20px auto;
+  margin: 0 auto;
   background: white;
   border-radius: 12px;
   overflow: hidden;
@@ -2072,4 +2072,29 @@ html {
 
 .main-navbar .logo:hover {
   color: #38bdf8 !important;
+}
+
+/* ==========================================
+   REMOVE WHITE GAPS AROUND HERO
+========================================== */
+
+html,
+body {
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.page-wrapper {
+  margin-top: 0 !important;
+}
+
+.hero {
+  margin: 0 !important;
+  min-height: 100vh;
+}
+
+.hero-video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
