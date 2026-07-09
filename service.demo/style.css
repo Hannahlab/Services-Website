@@ -1284,7 +1284,7 @@ h6,
   left: 40px;
 
   /* Snaps logo cleanly in the open space right above the copyright line */
-  bottom: 100px !important;
+  bottom: 60px !important;
   top: auto !important;
 
   font-size: clamp(
