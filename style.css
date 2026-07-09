@@ -1352,20 +1352,13 @@ button {
 }
 
 .footer-bottom {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 40px; /* Positions it nicely inside that 320px bottom padding space */
-  width: calc(100% - 48px); /* Keeps it lined up with your 24px side padding */
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 60px;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  z-index: 10; /* Keeps your text and links on top of the FIXORA text */
 }
 
 .footer-bottom a {
@@ -1416,19 +1409,23 @@ button {
     max-width: 340px;
   }
 
-.footer-bottom{
-    position:absolute;
-    left:0;
-    right:0;
-    bottom:5px; /* or 0px */
-    width:calc(100% - 80px);
-    max-width:1200px;
-    margin:0 auto;
+  .footer-bottom {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 25px;
 
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    text-align: left;
+    gap: 0;
+
+    width: calc(100% - 80px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 
   .main-footer::after {
     left: 20px;
@@ -1619,25 +1616,4 @@ html {
 
 .footer-legal-link:hover {
   color: #38bdf8;
-}
-
-/* Background wrapper adjustment for the sections */
-.section-neumorphic-bg {
-  background-color: #f4f6f8 !important; /* Soft gray background so highlights pop */
-  padding: 60px 20px;
-}
-
-/* Apply this to your white cards/sections */
-.shadow-2-card {
-  background-color: #ffffff !important;
-  border-radius: 24px; /* Smooth rounded corners matching your current style */
-  padding: 40px;
-  margin-bottom: 40px;
-  
-  /* The soft extruded UI shadow system */
-  box-shadow: 
-    10px 10px 20px rgba(163, 177, 198, 0.4),    /* Soft dark outer shadow */
-    -10px -10px 20px rgba(255, 255, 255, 0.9),  /* Crisp white outer glow */
-    inset 6px 6px 12px rgba(163, 177, 198, 0.15), /* Subtle inner shadow depth */
-    inset -6px -6px 12px rgba(255, 255, 255, 0.5);
 }
