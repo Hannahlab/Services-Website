@@ -9,7 +9,11 @@
 
 /* Base text styles (Inter for readability) */
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family:
+    "Inter",
+    system-ui,
+    -apple-system,
+    sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #333333;
@@ -17,37 +21,48 @@ body {
 }
 
 /* Heading styles (Chivo for a strong, reliable look) */
-h1, h2, h3, h4, h5, h6, .logo {
-  font-family: 'Chivo', sans-serif !important;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.logo {
+  font-family: "Chivo", sans-serif !important;
   font-weight: 700; /* Bold weight for punchy headlines */
   letter-spacing: -0.02em; /* Tightens the letters for a crisp look */
 }
 
 /* Apply new font family variables to existing template component buttons */
-.btn, .btn-call, .call-btn, .phone-text {
-  font-family: 'Chivo', sans-serif !important;
+.btn,
+.btn-call,
+.call-btn,
+.phone-text {
+  font-family: "Chivo", sans-serif !important;
   font-weight: 700;
 }
 
-
-
 .page-wrapper {
+  width: 100%;
   max-width: 1440px;
-  margin: 20px auto;
-  background: white;
-  border-radius: 12px;
+  margin: 0 auto;
+  background: #fff;
   overflow: hidden;
-  box-shadow:
-    0 10px 40px rgba(0, 0, 0, 0.08),
-    0 2px 10px rgba(0, 0, 0, 0.04);
+  border-radius: 0;
+  box-shadow: none;
 }
 
-/* Floating Navigation Bar over Video */
-.main-navbar {
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+.main-navbar{
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translateX(-50%);
+    width:100%;
+    max-width:1440px;
+    height:80px;
+    padding:0 30px;
+    border-radius:0 0 18px 18px;
+}
 
   width: calc(100% - 60px);
   max-width: 1280px;
@@ -875,10 +890,10 @@ h1, h2, h3, h4, h5, h6, .logo {
     left: 50% !important;
     transform: translateX(-50%) !important;
     height: 75px !important; /* Fixed snug height to keep items locked on one line */
-    padding: 0 16px !important; 
+    padding: 0 16px !important;
     display: flex !important;
     flex-direction: row !important; /* Guarantees a single horizontal line */
-    justify-content: space-between !important; 
+    justify-content: space-between !important;
     align-items: center !important; /* Aligns all text and buttons perfectly vertical center */
   }
 
@@ -886,7 +901,7 @@ h1, h2, h3, h4, h5, h6, .logo {
   .main-navbar .logo {
     position: absolute !important;
     left: 16px !important;
-    font-size: 1.05rem !important; 
+    font-size: 1.05rem !important;
     font-weight: 800 !important;
     letter-spacing: -0.5px !important;
     margin: 0 !important;
@@ -901,7 +916,7 @@ h1, h2, h3, h4, h5, h6, .logo {
     display: flex !important;
     flex-direction: row !important;
     gap: 24px !important; /* Wide channels between Services, About Us, and Reviews */
-    justify-content: center !important; 
+    justify-content: center !important;
     align-items: center !important;
     margin: 0 auto !important; /* Forces the entire block to lock perfectly dead center */
     padding: 0 10px !important;
@@ -909,7 +924,7 @@ h1, h2, h3, h4, h5, h6, .logo {
 
   .nav-links a {
     font-size: 1rem !important; /* Keeps your crisp, highly-legible text scale */
-    font-weight: 700 !important;  
+    font-weight: 700 !important;
     white-space: nowrap !important;
     color: #ffffff !important;
   }
@@ -922,8 +937,8 @@ h1, h2, h3, h4, h5, h6, .logo {
   .call-btn {
     position: absolute !important;
     right: 16px !important; /* Layers it safely out of the way on the far right */
-    
-    display: inline-flex !important; 
+
+    display: inline-flex !important;
     align-items: center !important;
     justify-content: center !important;
     gap: 8px !important;
@@ -934,19 +949,18 @@ h1, h2, h3, h4, h5, h6, .logo {
 
     padding: 8px 14px !important; /* Standard rectangular button padding */
     border-radius: 12px !important; /* Restores rectangular capsule corners */
-    width: max-content !important; 
-    
+    width: max-content !important;
+
     font-size: 0.85rem !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
   }
 
-    /* Add this inside the very bottom of your mobile media query block */
+  /* Add this inside the very bottom of your mobile media query block */
   .nav-links a:hover {
     color: #38bdf8 !important; /* Changes the link words to vibrant brand blue on hover */
     text-decoration: none !important;
   }
-
 
   .call-btn:hover {
     background: #16a34a !important;
@@ -955,7 +969,7 @@ h1, h2, h3, h4, h5, h6, .logo {
 
   /* UNHIDES PHONE DIGITS: Forces the full number string to appear on screen */
   .phone-text {
-    display: inline !important; 
+    display: inline !important;
     color: #ffffff !important;
   }
 
@@ -964,7 +978,6 @@ h1, h2, h3, h4, h5, h6, .logo {
     display: inline-block !important;
   }
 }
-
 
 /* ==========================================
    RECENT WORK SECTION STYLES
@@ -1232,11 +1245,11 @@ h1, h2, h3, h4, h5, h6, .logo {
   margin-top: -30px !important;
   position: relative;
   overflow: hidden;
-  
+
   /* ADJUSTED SPACING: */
-  padding-top: 140px !important;    /* Keeps the top clean and snug to the CTA section */
+  padding-top: 140px !important; /* Keeps the top clean and snug to the CTA section */
   padding-bottom: 220px !important; /* MASSIVELY increases bottom padding to expand the footer down and make deep space */
-  min-height:520px !important;     /* Creates a much taller box overall so content stays split */
+  min-height: 520px !important; /* Creates a much taller box overall so content stays split */
 }
 
 .footer-grid {
@@ -1248,11 +1261,10 @@ h1, h2, h3, h4, h5, h6, .logo {
   margin: 0 auto !important;
   position: relative;
   z-index: 2;
-  
+
   /* CRITICAL CHANGE: */
   margin-bottom: 60px !important; /* Explicitly lifts this entire row up away from the bottom elements */
 }
-
 
 /* 3. Re-aligns column paragraphs and links list onto a shared horizontal line */
 .footer-brand p,
@@ -1270,15 +1282,24 @@ h1, h2, h3, h4, h5, h6, .logo {
   content: attr(data-name);
   position: absolute;
   left: 40px;
-  
+
   /* Snaps logo cleanly in the open space right above the copyright line */
-  bottom: 100px !important; 
+  bottom: 100px !important;
   top: auto !important;
-  
-  font-size: clamp(6rem, 14vw, 12rem) !important; /* Bold presentation scaling */
+
+  font-size: clamp(
+    6rem,
+    14vw,
+    12rem
+  ) !important; /* Bold presentation scaling */
   font-weight: 900;
   line-height: 1;
-  color: rgba(255, 255, 255, 0.14) !important; /* Vibrant white overlay tint (no longer faded) */
+  color: rgba(
+    255,
+    255,
+    255,
+    0.14
+  ) !important; /* Vibrant white overlay tint (no longer faded) */
   letter-spacing: -5px;
   white-space: nowrap;
   pointer-events: none;
@@ -1296,7 +1317,7 @@ h1, h2, h3, h4, h5, h6, .logo {
   width: 100%;
   margin: 0 auto !important;
   z-index: 3;
-  
+
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
@@ -1463,18 +1484,18 @@ h1, h2, h3, h4, h5, h6, .logo {
   content: "VOLTPRO";
   position: absolute;
   left: 40px;
-  
+
   /* Lifts VOLTPRO up above the copyright and privacy policy links */
-  bottom: 80px !important; 
+  bottom: 80px !important;
   top: auto !important;
-  
+
   font-size: clamp(6rem, 14vw, 12rem) !important;
   font-weight: 900;
   line-height: 1;
-  
+
   /* FIX: Increased opacity to 0.18 so it's a clean, bright white watermark (no longer faint) */
-  color: rgba(255, 255, 255, 0.18) !important; 
-  
+  color: rgba(255, 255, 255, 0.18) !important;
+
   letter-spacing: -5px;
   white-space: nowrap;
   pointer-events: none;
@@ -1483,22 +1504,22 @@ h1, h2, h3, h4, h5, h6, .logo {
 
 /* 2. LOWER LINKS BAR: ANCHORED AT THE ABSOLUTE BOTTOM WITH REMOVED SEPARATOR LINE */
 .footer-bottom {
-  position: absolute !important; 
+  position: absolute !important;
   bottom: 25px !important; /* Pins it to the very bottom floor of the screen */
   left: 40px !important;
   right: 40px !important;
-  
+
   max-width: 1200px;
   width: calc(100% - 80px);
   margin: 0 auto !important;
   z-index: 3;
-  
+
   display: flex !important;
   justify-content: space-between !important;
   align-items: center !important;
-  
+
   /* FIXES: Removed the border line completely and made text a clear, bright color */
-  border-top: none !important; 
+  border-top: none !important;
   color: #cbd5e1 !important; /* Changed from dark slate grey to a crisp, high-contrast light grey */
   font-size: 0.9rem;
 }
@@ -1510,14 +1531,14 @@ h1, h2, h3, h4, h5, h6, .logo {
   color: #cbd5e1 !important;
 }
 
-
 /* ==========================================
    FIX: CTA SECTION STYLING OVERRIDES
    ========================================== */
 /* Expand the image section size */
 .cta-section {
   height: 600px !important; /* Increased from 450px to stretch the image down further */
-  background: url("https://res.cloudinary.com/kfcu2z4r/image/upload/v1783349960/pexels-bulat843-1243575272-33531832_vle1xo.jpg") center/cover;
+  background: url("https://res.cloudinary.com/kfcu2z4r/image/upload/v1783349960/pexels-bulat843-1243575272-33531832_vle1xo.jpg")
+    center/cover;
   position: relative;
   display: flex;
   align-items: center;
@@ -1529,7 +1550,6 @@ h1, h2, h3, h4, h5, h6, .logo {
   border-radius: 16px 16px 0 0 !important; /* Flat bottom edge */
   overflow: hidden;
 }
-
 
 .cta-overlay {
   position: absolute;
@@ -1591,11 +1611,10 @@ h1, h2, h3, h4, h5, h6, .logo {
    MOBILE FOOTER DISPLAY ADJUSTMENTS (FIXED)
    ========================================== */
 @media (max-width: 768px) {
-  
   /* 1. MASTER WORKSPACE CONTAINER WITH HEIGHT FOR VOLTPRO */
   .main-footer {
     padding: 80px 24px 220px 24px !important; /* MASSIVELY expanded bottom padding to create height for VOLTPRO */
-    min-height: 850px !important;              /* Forces a tall mobile container so the background text has room to appear */
+    min-height: 850px !important; /* Forces a tall mobile container so the background text has room to appear */
     position: relative !important;
     overflow: hidden !important;
     display: block !important;
@@ -1608,7 +1627,7 @@ h1, h2, h3, h4, h5, h6, .logo {
   .footer-grid {
     grid-template-columns: 1fr !important;
     gap: 60px !important; /* Increased vertically to prevent squashing */
-    text-align: center !important; 
+    text-align: center !important;
     margin-bottom: 60px !important;
     padding: 0 !important;
     display: grid !important;
@@ -1620,7 +1639,7 @@ h1, h2, h3, h4, h5, h6, .logo {
   .footer-cta-box {
     display: flex !important;
     flex-direction: column !important;
-    align-items: center !important; 
+    align-items: center !important;
     text-align: center !important;
   }
 
@@ -1685,9 +1704,10 @@ html {
 
 /* 2. Spice up Service Cards with a modern hover-lift and outline transition */
 .service-card {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.3s ease !important;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease !important;
 }
 
 .service-card:hover {
@@ -1703,7 +1723,7 @@ html {
 }
 
 .nav-links a::after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -1721,13 +1741,18 @@ html {
 }
 
 /* 4. Spice up Call-to-Action Buttons with a subtle zoom and pulse glow */
-.btn-primary, .btn-call, .call-btn {
-  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), 
-              background-color 0.2s ease, 
-              box-shadow 0.2s ease !important;
+.btn-primary,
+.btn-call,
+.call-btn {
+  transition:
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1),
+    background-color 0.2s ease,
+    box-shadow 0.2s ease !important;
 }
 
-.btn-primary:hover, .btn-call:hover, .call-btn:hover {
+.btn-primary:hover,
+.btn-call:hover,
+.call-btn:hover {
   transform: translateY(-2px) !important;
 }
 
@@ -1777,14 +1802,17 @@ html {
    Uses native grid transition techniques so <details> panels glide 
    open softly instead of jumping mechanically. */
 .faq-item {
-  transition: border-color 0.3s ease, box-shadow 0.3s ease !important;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease !important;
 }
 
 .faq-answer {
   display: grid;
   grid-template-rows: 0fr; /* Keeps text collapse locked tight when shut */
-  transition: grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1), 
-              padding 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  transition:
+    grid-template-rows 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+    padding 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
   padding: 0 20px !important; /* Starts with zero top/bottom padding to prevent jump stutter */
   overflow: hidden;
 }
@@ -1810,9 +1838,10 @@ html {
 
 /* 1. Prepares the project cards for smooth transitions */
 .portfolio-item {
-  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
-              border-color 0.3s ease !important;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.3s ease !important;
 }
 
 /* 2. Adds the premium lift and glow effect when a user hovers over the card */
@@ -1838,4 +1867,42 @@ html {
 .footer-legal-link:hover {
   color: #38bdf8 !important; /* Vibrant high-contrast blue glow tint */
   text-decoration: underline !important; /* Subtle underline indicator for web accessibility */
+}
+
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;
+    overflow-x:hidden;
+}
+
+.hero{
+    margin:0 !important;
+    padding-top:80px !important;
+}
+
+@media(max-width:768px){
+
+html,
+body{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.page-wrapper{
+    margin:0 !important;
+    border-radius:0 !important;
+}
+
+.main-navbar{
+    top:0 !important;
+    width:100% !important;
+    border-radius:0 !important;
+}
+
+.hero{
+    height:100svh !important;
+    padding-top:70px !important;
+}
+
 }
